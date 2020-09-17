@@ -1,0 +1,76 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 553c3ce7a499a63e09ce4c27a170db0293e459b02c2e8dd9f44eab0061c3e2f2
+
+name:           super-functor-factory
+version:        0.2.0.0
+description:    Please see the README on GitHub at <https://github.com/fpclass/super-functor-factory#readme>
+homepage:       https://github.com/fpclass/super-functor-factory#readme
+bug-reports:    https://github.com/fpclass/super-functor-factory/issues
+author:         Michael B. Gale
+maintainer:     m.gale@warwick.ac.uk
+copyright:      2020 Michael B. Gale
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/fpclass/super-functor-factory
+
+library
+  exposed-modules:
+      Game
+      Monad
+  other-modules:
+      Paths_super_functor_factory
+  hs-source-dirs:
+      src
+  build-depends:
+      ansi-terminal
+    , base >=4.7 && <5
+    , hashable
+    , random
+  default-language: Haskell2010
+
+executable super-functor-factory-exe
+  main-is: Main.hs
+  other-modules:
+      Config
+      Paths_super_functor_factory
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts
+  build-depends:
+      ansi-terminal
+    , base >=4.7 && <5
+    , hashable
+    , optparse-applicative
+    , random
+    , super-functor-factory
+  default-language: Haskell2010
+
+test-suite super-functor-factory-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_super_functor_factory
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts
+  build-depends:
+      QuickCheck
+    , ansi-terminal
+    , base >=4.7 && <5
+    , hashable
+    , hspec
+    , random
+    , super-functor-factory
+  default-language: Haskell2010

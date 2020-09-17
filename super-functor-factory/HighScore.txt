@@ -1,0 +1,11 @@
+name          seed      HighScore
+Luke          8         98
+Emily         9         67
+Eric          4         50
+Tom           7         32
+Michael       2         16
+Clara         5         13
+John          1         12
+Jamie         6         9
+Sara          3         5
+Maria         10        2
